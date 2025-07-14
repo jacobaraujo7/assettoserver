@@ -1,0 +1,271 @@
+2025-07-12 20:08:49.249 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:08:49.301 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:08:49.310 +00:00 [FTL] Error starting server
+IniParser.Exceptions.ParsingException: Could not parse file cfg/server_cfg.ini while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jacob/assetto/cfg/server_cfg.ini'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at IniParser.FileIniDataParser.ReadFile(String filePath)
+   at AssettoServer.Server.Configuration.ServerConfiguration.FromFile(String path) in AssettoServer/Server/Configuration/ServerConfiguration.cs:line 61
+   at AssettoServer.Server.Configuration.ACServerConfiguration..ctor(String preset, String serverCfgPath, String entryListPath, Boolean loadPluginsFromWorkdir) in AssettoServer/Server/Configuration/ACServerConfiguration.cs:line 66
+   at AssettoServer.Program.RunServerAsync(String preset, String serverCfgPath, String entryListPath, Boolean loadPluginsFromWorkdir, CancellationToken token) in AssettoServer/Program.cs:line 75
+2025-07-12 20:16:47.709 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:16:47.758 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:16:47.798 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:16:47.807 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:16:48.125 +00:00 [FTL] Error starting server
+FluentValidation.ValidationException: Validation failed: 
+ -- Server.AdminPassword: The length of 'ADMIN_PASSWORD' must be at least 8 characters. You entered 6 characters. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 531
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 258
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.DefaultValidatorExtensions.Validate[T](IValidator`1 validator, T instance, Action`1 options) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 38
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrow[T](IValidator`1 validator, T instance) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 59
+   at AssettoServer.Server.Configuration.ACServerConfiguration..ctor(String preset, String serverCfgPath, String entryListPath, Boolean loadPluginsFromWorkdir) in AssettoServer/Server/Configuration/ACServerConfiguration.cs:line 119
+   at AssettoServer.Program.RunServerAsync(String preset, String serverCfgPath, String entryListPath, Boolean loadPluginsFromWorkdir, CancellationToken token) in AssettoServer/Program.cs:line 75
+2025-07-12 20:18:24.516 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:18:24.570 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:18:24.616 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:18:24.625 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:18:25.437 +00:00 [INF] Starting server
+2025-07-12 20:18:25.483 +00:00 [WRN] No XML encryptor configured. Key {c79bb8b2-c822-49ff-8ee1-0c055d261ad2} may be persisted to storage in unencrypted form.
+2025-07-12 20:18:25.656 +00:00 [INF] File blacklist.txt changed on disk, reloading
+2025-07-12 20:18:25.656 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:18:25.658 +00:00 [INF] File whitelist.txt changed on disk, reloading
+2025-07-12 20:18:25.658 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:18:25.659 +00:00 [INF] File admins.txt changed on disk, reloading
+2025-07-12 20:18:25.659 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:18:25.662 +00:00 [INF] Starting HTTP server on port 8081
+2025-07-12 20:18:25.664 +00:00 [INF] Loaded 18 cars
+2025-07-12 20:18:25.670 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:18:25.670 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:18:25.670 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:18:25.676 +00:00 [DBG] Added checksum for system/data/surfaces.ini
+2025-07-12 20:18:25.676 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/layout_gp/data/surfaces.ini
+2025-07-12 20:18:25.676 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/models_layout_gp.ini
+2025-07-12 20:18:25.676 +00:00 [INF] Initialized 3 track checksums
+2025-07-12 20:18:25.678 +00:00 [DBG] Added checksum for bmw_m3_e30
+2025-07-12 20:18:25.679 +00:00 [DBG] Added checksum for ks_ferrari_488_gt3
+2025-07-12 20:18:25.679 +00:00 [DBG] Added checksum for ferrari_f40
+2025-07-12 20:18:25.680 +00:00 [DBG] Added checksum for ferrari_f40_s3
+2025-07-12 20:18:25.680 +00:00 [DBG] Added checksum for ks_ferrari_312_67
+2025-07-12 20:18:25.681 +00:00 [DBG] Added checksum for ferrari_312t
+2025-07-12 20:18:25.681 +00:00 [DBG] Added checksum for bmw_z4_gt3
+2025-07-12 20:18:25.682 +00:00 [DBG] Added checksum for ks_porsche_911_gt1
+2025-07-12 20:18:25.683 +00:00 [DBG] Added checksum for ks_porsche_911_gt3_cup_2017
+2025-07-12 20:18:25.687 +00:00 [INF] Initialized 9 car checksums
+2025-07-12 20:18:25.690 +00:00 [INF] Next session: Practice
+2025-07-12 20:18:25.692 +00:00 [INF] Switching session to id 0
+2025-07-12 20:18:26.138 +00:00 [INF] Server invite link: https://acstuff.ru/s/q:race/online/join?ip=131.100.62.91&httpPort=8081
+2025-07-12 20:18:26.141 +00:00 [INF] cfg/data_track_params.ini not found, downloading from GitHub...
+2025-07-12 20:18:26.146 +00:00 [INF] Starting TCP server on port 9600
+2025-07-12 20:18:26.149 +00:00 [INF] Starting UDP server on port 9600
+2025-07-12 20:18:26.159 +00:00 [INF] Registering server to lobby...
+2025-07-12 20:18:26.164 +00:00 [INF] Starting update loop with an update rate of 18hz
+2025-07-12 20:18:27.419 +00:00 [ERR] Error during Kunos lobby registration
+AssettoServer.Server.KunosLobbyException: ERROR,INVALID SERVER,CHECK YOUR PORT FORWARDING SETTINGS
+   at AssettoServer.Server.KunosLobbyRegistration.RegisterToLobbyAsync(CancellationToken token) in AssettoServer/Server/KunosLobbyRegistration.cs:line 113
+   at AssettoServer.Server.KunosLobbyRegistration.ExecuteAsync(CancellationToken stoppingToken) in AssettoServer/Server/KunosLobbyRegistration.cs:line 37
+2025-07-12 20:18:48.242 +00:00 [INF] Server shutting down
+2025-07-12 20:19:06.053 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:19:06.102 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:19:06.142 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:19:06.151 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:19:06.951 +00:00 [INF] Starting server
+2025-07-12 20:19:07.152 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:19:07.160 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:19:07.162 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:19:07.165 +00:00 [INF] Starting HTTP server on port 8081
+2025-07-12 20:19:07.167 +00:00 [INF] Loaded 18 cars
+2025-07-12 20:19:07.178 +00:00 [DBG] Added checksum for system/data/surfaces.ini
+2025-07-12 20:19:07.179 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/layout_gp/data/surfaces.ini
+2025-07-12 20:19:07.179 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/models_layout_gp.ini
+2025-07-12 20:19:07.180 +00:00 [INF] Initialized 3 track checksums
+2025-07-12 20:19:07.181 +00:00 [DBG] Added checksum for bmw_m3_e30
+2025-07-12 20:19:07.182 +00:00 [DBG] Added checksum for ks_ferrari_488_gt3
+2025-07-12 20:19:07.183 +00:00 [DBG] Added checksum for ferrari_f40
+2025-07-12 20:19:07.183 +00:00 [DBG] Added checksum for ferrari_f40_s3
+2025-07-12 20:19:07.184 +00:00 [DBG] Added checksum for ks_ferrari_312_67
+2025-07-12 20:19:07.185 +00:00 [DBG] Added checksum for ferrari_312t
+2025-07-12 20:19:07.185 +00:00 [DBG] Added checksum for bmw_z4_gt3
+2025-07-12 20:19:07.186 +00:00 [DBG] Added checksum for ks_porsche_911_gt1
+2025-07-12 20:19:07.186 +00:00 [DBG] Added checksum for ks_porsche_911_gt3_cup_2017
+2025-07-12 20:19:07.191 +00:00 [INF] Initialized 9 car checksums
+2025-07-12 20:19:07.194 +00:00 [INF] Next session: Practice
+2025-07-12 20:19:07.195 +00:00 [INF] Switching session to id 0
+2025-07-12 20:19:07.640 +00:00 [INF] Server invite link: https://acstuff.ru/s/q:race/online/join?ip=131.100.62.91&httpPort=8081
+2025-07-12 20:19:07.698 +00:00 [INF] Starting TCP server on port 9600
+2025-07-12 20:19:07.702 +00:00 [INF] Starting UDP server on port 9600
+2025-07-12 20:19:07.711 +00:00 [INF] Registering server to lobby...
+2025-07-12 20:19:07.717 +00:00 [INF] Starting update loop with an update rate of 18hz
+2025-07-12 20:19:08.966 +00:00 [ERR] Error during Kunos lobby registration
+AssettoServer.Server.KunosLobbyException: ERROR,INVALID SERVER,CHECK YOUR PORT FORWARDING SETTINGS
+   at AssettoServer.Server.KunosLobbyRegistration.RegisterToLobbyAsync(CancellationToken token) in AssettoServer/Server/KunosLobbyRegistration.cs:line 113
+   at AssettoServer.Server.KunosLobbyRegistration.ExecuteAsync(CancellationToken stoppingToken) in AssettoServer/Server/KunosLobbyRegistration.cs:line 37
+2025-07-12 20:19:18.994 +00:00 [INF] Server shutting down
+2025-07-12 20:20:49.138 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:20:49.187 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:20:49.228 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:20:49.237 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:20:50.020 +00:00 [INF] Starting server
+2025-07-12 20:20:50.225 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:20:50.233 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:20:50.234 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:20:50.238 +00:00 [INF] Starting HTTP server on port 8081
+2025-07-12 20:20:50.240 +00:00 [INF] Loaded 18 cars
+2025-07-12 20:20:50.251 +00:00 [DBG] Added checksum for system/data/surfaces.ini
+2025-07-12 20:20:50.252 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/layout_gp/data/surfaces.ini
+2025-07-12 20:20:50.252 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/models_layout_gp.ini
+2025-07-12 20:20:50.252 +00:00 [INF] Initialized 3 track checksums
+2025-07-12 20:20:50.254 +00:00 [DBG] Added checksum for bmw_m3_e30
+2025-07-12 20:20:50.255 +00:00 [DBG] Added checksum for ks_ferrari_488_gt3
+2025-07-12 20:20:50.255 +00:00 [DBG] Added checksum for ferrari_f40
+2025-07-12 20:20:50.256 +00:00 [DBG] Added checksum for ferrari_f40_s3
+2025-07-12 20:20:50.256 +00:00 [DBG] Added checksum for ks_ferrari_312_67
+2025-07-12 20:20:50.257 +00:00 [DBG] Added checksum for ferrari_312t
+2025-07-12 20:20:50.257 +00:00 [DBG] Added checksum for bmw_z4_gt3
+2025-07-12 20:20:50.258 +00:00 [DBG] Added checksum for ks_porsche_911_gt1
+2025-07-12 20:20:50.258 +00:00 [DBG] Added checksum for ks_porsche_911_gt3_cup_2017
+2025-07-12 20:20:50.263 +00:00 [INF] Initialized 9 car checksums
+2025-07-12 20:20:50.266 +00:00 [INF] Next session: Practice
+2025-07-12 20:20:50.267 +00:00 [INF] Switching session to id 0
+2025-07-12 20:20:50.712 +00:00 [INF] Server invite link: https://acstuff.ru/s/q:race/online/join?ip=131.100.62.91&httpPort=8081
+2025-07-12 20:20:50.770 +00:00 [INF] Starting TCP server on port 9600
+2025-07-12 20:20:50.773 +00:00 [INF] Starting UDP server on port 9600
+2025-07-12 20:20:50.782 +00:00 [INF] Registering server to lobby...
+2025-07-12 20:20:50.788 +00:00 [INF] Starting update loop with an update rate of 18hz
+2025-07-12 20:20:52.043 +00:00 [ERR] Error during Kunos lobby registration
+AssettoServer.Server.KunosLobbyException: ERROR,INVALID SERVER,CHECK YOUR PORT FORWARDING SETTINGS
+   at AssettoServer.Server.KunosLobbyRegistration.RegisterToLobbyAsync(CancellationToken token) in AssettoServer/Server/KunosLobbyRegistration.cs:line 113
+   at AssettoServer.Server.KunosLobbyRegistration.ExecuteAsync(CancellationToken stoppingToken) in AssettoServer/Server/KunosLobbyRegistration.cs:line 37
+2025-07-12 20:25:36.793 +00:00 [INF] Server shutting down
+2025-07-12 20:27:23.347 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:27:23.396 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:27:23.436 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:27:23.446 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:27:24.238 +00:00 [INF] Starting server
+2025-07-12 20:27:24.441 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:27:24.449 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:27:24.451 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:27:24.455 +00:00 [INF] Starting HTTP server on port 9601
+2025-07-12 20:27:24.456 +00:00 [INF] Loaded 18 cars
+2025-07-12 20:27:24.468 +00:00 [DBG] Added checksum for system/data/surfaces.ini
+2025-07-12 20:27:24.468 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/layout_gp/data/surfaces.ini
+2025-07-12 20:27:24.468 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/models_layout_gp.ini
+2025-07-12 20:27:24.469 +00:00 [INF] Initialized 3 track checksums
+2025-07-12 20:27:24.470 +00:00 [DBG] Added checksum for bmw_m3_e30
+2025-07-12 20:27:24.471 +00:00 [DBG] Added checksum for ks_ferrari_488_gt3
+2025-07-12 20:27:24.472 +00:00 [DBG] Added checksum for ferrari_f40
+2025-07-12 20:27:24.472 +00:00 [DBG] Added checksum for ferrari_f40_s3
+2025-07-12 20:27:24.473 +00:00 [DBG] Added checksum for ks_ferrari_312_67
+2025-07-12 20:27:24.473 +00:00 [DBG] Added checksum for ferrari_312t
+2025-07-12 20:27:24.474 +00:00 [DBG] Added checksum for bmw_z4_gt3
+2025-07-12 20:27:24.474 +00:00 [DBG] Added checksum for ks_porsche_911_gt1
+2025-07-12 20:27:24.475 +00:00 [DBG] Added checksum for ks_porsche_911_gt3_cup_2017
+2025-07-12 20:27:24.479 +00:00 [INF] Initialized 9 car checksums
+2025-07-12 20:27:24.482 +00:00 [INF] Next session: Practice
+2025-07-12 20:27:24.484 +00:00 [INF] Switching session to id 0
+2025-07-12 20:27:24.948 +00:00 [INF] Server invite link: https://acstuff.ru/s/q:race/online/join?ip=131.100.62.91&httpPort=9601
+2025-07-12 20:27:25.006 +00:00 [INF] Starting TCP server on port 9600
+2025-07-12 20:27:25.009 +00:00 [INF] Starting UDP server on port 9600
+2025-07-12 20:27:25.017 +00:00 [INF] Starting update loop with an update rate of 18hz
+2025-07-12 20:31:08.303 +00:00 [INF] Server shutting down
+2025-07-12 20:39:01.957 +00:00 [INF] AssettoServer 0.0.54+51737e2c2e
+2025-07-12 20:39:02.025 +00:00 [DBG] Loading server_cfg.ini from cfg/server_cfg.ini
+2025-07-12 20:39:02.063 +00:00 [DBG] Loading entry_list.ini from cfg/entry_list.ini
+2025-07-12 20:39:02.072 +00:00 [DBG] Loading extra_cfg.yml from cfg/extra_cfg.yml
+2025-07-12 20:39:02.974 +00:00 [INF] Starting server
+2025-07-12 20:39:03.021 +00:00 [WRN] No XML encryptor configured. Key {c93005f3-a4a5-46d4-a379-0e5ba09b98d6} may be persisted to storage in unencrypted form.
+2025-07-12 20:39:03.440 +00:00 [DBG] Loaded blacklist.txt with 0 entries
+2025-07-12 20:39:03.448 +00:00 [DBG] Loaded whitelist.txt with 0 entries
+2025-07-12 20:39:03.449 +00:00 [DBG] Loaded admins.txt with 0 entries
+2025-07-12 20:39:03.451 +00:00 [INF] Starting HTTP server on port 8081
+2025-07-12 20:39:03.453 +00:00 [INF] Loaded 18 cars
+2025-07-12 20:39:03.462 +00:00 [DBG] Added checksum for system/data/surfaces.ini
+2025-07-12 20:39:03.462 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/layout_gp/data/surfaces.ini
+2025-07-12 20:39:03.463 +00:00 [DBG] Added checksum for content/tracks/ks_red_bull_ring/models_layout_gp.ini
+2025-07-12 20:39:03.464 +00:00 [INF] Initialized 3 track checksums
+2025-07-12 20:39:03.465 +00:00 [DBG] Added checksum for bmw_m3_e30
+2025-07-12 20:39:03.466 +00:00 [DBG] Added checksum for ks_ferrari_488_gt3
+2025-07-12 20:39:03.467 +00:00 [DBG] Added checksum for ferrari_f40
+2025-07-12 20:39:03.468 +00:00 [DBG] Added checksum for ferrari_f40_s3
+2025-07-12 20:39:03.469 +00:00 [DBG] Added checksum for ks_ferrari_312_67
+2025-07-12 20:39:03.469 +00:00 [DBG] Added checksum for ferrari_312t
+2025-07-12 20:39:03.470 +00:00 [DBG] Added checksum for bmw_z4_gt3
+2025-07-12 20:39:03.470 +00:00 [DBG] Added checksum for ks_porsche_911_gt1
+2025-07-12 20:39:03.472 +00:00 [DBG] Added checksum for ks_porsche_911_gt3_cup_2017
+2025-07-12 20:39:03.476 +00:00 [INF] Initialized 9 car checksums
+2025-07-12 20:39:03.479 +00:00 [INF] Next session: Practice
+2025-07-12 20:39:03.480 +00:00 [INF] Switching session to id 0
+2025-07-12 20:39:03.984 +00:00 [INF] Server invite link: https://acstuff.ru/s/q:race/online/join?ip=212.85.22.75&httpPort=8081
+2025-07-12 20:39:04.135 +00:00 [INF] Starting TCP server on port 9600
+2025-07-12 20:39:04.157 +00:00 [INF] Starting UDP server on port 9600
+2025-07-12 20:39:04.175 +00:00 [INF] Starting update loop with an update rate of 18hz
+2025-07-12 20:40:47.222 +00:00 [INF] Player (76561198319765936 - 131.100.62.91:45585) is attempting to connect (ks_ferrari_488_gt3)
+2025-07-12 20:40:47.224 +00:00 [DBG] Player supports extra CSP features: ["STEAM_TICKET","CLIENT_MESSAGES","SPECTATING_AWARE","WEATHERFX_V1","WEATHERFX_V2","WEATHERFX_V3","BATCH_FIX_V2","CUSTOM_UPDATE","CUSTOM_UPDATE_V2","CLIENT_UDP_MESSAGES","BATCH_MESSAGES","EXPLICIT_ADMIN_STATE","3465"]
+2025-07-12 20:40:47.231 +00:00 [INF] Player (76561198319765936, 1 (ks_ferrari_488_gt3-0_kaspersky_55)) has connected
+2025-07-12 20:41:00.122 +00:00 [INF] Guilhermespss (76561198105384878 - 200.80.110.86:48436) is attempting to connect (ks_ferrari_488_gt3)
+2025-07-12 20:41:00.122 +00:00 [DBG] Guilhermespss supports extra CSP features: ["STEAM_TICKET","CLIENT_MESSAGES","SPECTATING_AWARE","WEATHERFX_V1","WEATHERFX_V2","WEATHERFX_V3","BATCH_FIX_V2","CUSTOM_UPDATE","CUSTOM_UPDATE_V2","CLIENT_UDP_MESSAGES","BATCH_MESSAGES","EXPLICIT_ADMIN_STATE","3335"]
+2025-07-12 20:41:00.122 +00:00 [INF] Guilhermespss (76561198105384878, 2 (ks_ferrari_488_gt3-17_racing_499)) has connected
+2025-07-12 20:41:00.333 +00:00 [INF] CHAT: Player (1): 				$CSP0:YOqrL2En
+2025-07-12 20:41:27.655 +00:00 [INF] CHAT: Guilhermespss (2): RP: App not active
+2025-07-12 20:41:28.974 +00:00 [INF] CHAT: Guilhermespss (2): 				$CSP0:YOqrL2En
+2025-07-12 20:42:59.670 +00:00 [INF] Collision between Player (1) and environment, rel. speed 17km/h
+2025-07-12 20:43:57.426 +00:00 [INF] Lap completed by Guilhermespss, 1 cuts, laptime 147682
+2025-07-12 20:44:48.104 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 228804
+2025-07-12 20:45:45.423 +00:00 [INF] Lap completed by Guilhermespss, 1 cuts, laptime 108001
+2025-07-12 20:47:05.680 +00:00 [INF] Lap completed by Player, 4 cuts, laptime 137574
+2025-07-12 20:47:32.814 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 107389
+2025-07-12 20:48:53.694 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 108017
+2025-07-12 20:49:03.496 +00:00 [INF] Next session: Qualify
+2025-07-12 20:49:03.498 +00:00 [INF] Switching session to id 1
+2025-07-12 20:51:54.159 +00:00 [INF] Collision between Player (1) and environment, rel. speed 20km/h
+2025-07-12 20:52:00.508 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 176933
+2025-07-12 20:52:05.677 +00:00 [INF] Lap completed by Player, 1 cuts, laptime 182145
+2025-07-12 20:53:47.220 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 106711
+2025-07-12 20:54:03.520 +00:00 [INF] Next session: Race
+2025-07-12 20:54:03.520 +00:00 [INF] Switching session to id 2
+2025-07-12 20:55:26.761 +00:00 [INF] Collision between Player (1) and environment, rel. speed 42km/h
+2025-07-12 20:55:28.961 +00:00 [INF] Collision between Player (1) and environment, rel. speed 5km/h
+2025-07-12 20:57:38.787 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 155188
+2025-07-12 20:57:39.105 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 168320
+2025-07-12 20:59:20.993 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 54km/h
+2025-07-12 20:59:33.897 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 114793
+2025-07-12 20:59:35.645 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 116861
+2025-07-12 21:01:46.461 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 132566
+2025-07-12 21:01:46.835 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 131182
+2025-07-12 21:03:29.835 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 103372
+2025-07-12 21:03:30.536 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 103712
+2025-07-12 21:05:37.023 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 126488
+2025-07-12 21:05:40.289 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 130456
+2025-07-12 21:07:41.299 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 121010
+2025-07-12 21:07:41.930 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 124909
+2025-07-12 21:08:14.106 +00:00 [INF] Collision between Player (1) and Guilhermespss (2), rel. speed 17km/h
+2025-07-12 21:08:14.201 +00:00 [INF] Collision between Guilhermespss (2) and Player (1), rel. speed 9km/h
+2025-07-12 21:09:32.943 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 33km/h
+2025-07-12 21:09:33.191 +00:00 [INF] Collision between Guilhermespss (2) and Player (1), rel. speed 72km/h
+2025-07-12 21:09:33.194 +00:00 [INF] Collision between Player (1) and Guilhermespss (2), rel. speed 61km/h
+2025-07-12 21:09:33.402 +00:00 [INF] Collision between Player (1) and environment, rel. speed 52km/h
+2025-07-12 21:09:40.263 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 26km/h
+2025-07-12 21:09:56.912 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 134983
+2025-07-12 21:09:56.982 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 135687
+2025-07-12 21:11:43.579 +00:00 [INF] Lap completed by Guilhermespss, 0 cuts, laptime 106669
+2025-07-12 21:11:43.958 +00:00 [INF] Lap completed by Player, 0 cuts, laptime 106974
+2025-07-12 21:11:44.326 +00:00 [INF] Collision between Player (1) and Guilhermespss (2), rel. speed 95km/h
+2025-07-12 21:11:44.358 +00:00 [INF] Collision between Guilhermespss (2) and Player (1), rel. speed 69km/h
+2025-07-12 21:11:45.153 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 27km/h
+2025-07-12 21:11:47.738 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 15km/h
+2025-07-12 21:11:50.819 +00:00 [INF] Collision between Player (1) and environment, rel. speed 45km/h
+2025-07-12 21:11:52.822 +00:00 [INF] Collision between Player (1) and environment, rel. speed 0km/h
+2025-07-12 21:12:17.233 +00:00 [DBG] Received clean exit from Player (1)
+2025-07-12 21:12:17.236 +00:00 [DBG] Disconnecting Player (131.100.62.91:45585)
+2025-07-12 21:12:17.238 +00:00 [INF] Player has disconnected
+2025-07-12 21:12:27.336 +00:00 [INF] Collision between Guilhermespss (2) and environment, rel. speed 26km/h
+2025-07-12 21:12:31.324 +00:00 [INF] Server shutting down
