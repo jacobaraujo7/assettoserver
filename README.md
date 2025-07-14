@@ -1,0 +1,3 @@
+# Assetto Corsa Server
+
+Inicial
